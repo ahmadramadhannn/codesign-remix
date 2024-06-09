@@ -9,9 +9,22 @@ import {
 
 import stylesheet from "~/tailwind.css?url"
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet }
-]
+
+import { fonts } from "../constants";
+
+export const links: LinksFunction = () => {
+
+  const fontFamilies = Object.values(fonts).join('&family=');
+
+
+  const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamilies}&display=swap`;
+  return [
+    { rel: "stylesheet", href: stylesheet },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com" },
+    { rel: "stylesheet", href: fontUrl },
+  ]
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

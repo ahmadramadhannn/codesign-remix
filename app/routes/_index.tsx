@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -10,7 +11,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <p className="text-red-500"> hello world </p>
+      <p className="text-red-500 italic text-yellow-400 font-bold uppercase text-4xl"> code the design </p>
     </div>
   )
 }
