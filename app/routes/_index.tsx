@@ -1,13 +1,12 @@
+import { FilterChallenge } from "~/components"
 
 
 
-
-export default function ndex() {
+export default function Page() {
   return (
 
-    <div>
-
-      <p> welcome </p>
+    <div className="mt-10">
+      <FilterChallenge />
     </div>
   )
 }

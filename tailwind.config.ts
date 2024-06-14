@@ -12,6 +12,7 @@ export default {
       backgroundColor: {
         home: {
           'primary-blue': '#1f4290',
+          'brand': '#ffd466'
         }
       },
       textColor: {
