@@ -2,7 +2,8 @@ import { useState } from "react"
 import { FilterDropdown, FilterButton } from "."
 
 
-export function FilterChallenge() {
+export function FilterChallenge({ totalChallenges }: { totalChallenges: number }) {
+
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen)
@@ -19,10 +20,10 @@ export function FilterChallenge() {
             <FilterDropdown isDropdownOpen={isDropdownOpen} />
           </div>
         </div>
-        <h3 className="font-patrick-hand text-home-brand text-2xl">/51 challenges </h3>
+        <h3 className="font-patrick-hand text-home-brand text-2xl">/{totalChallenges} challenges </h3>
       </div>
       <FilterButton />
-      <div onMouseDown={toggleDropdown} className={`absolute top-0 left-0 w-full h-full ${isDropdownOpen ? 'block' : 'hidden'} `}></div>
+      <div onMouseDown={toggleDropdown} className={`absolute top-0 left-0 w-full h-full ${isDropdownOpen ? 'block' : 'hidden'} z-[99]`}></div>
     </div>
   )
 }

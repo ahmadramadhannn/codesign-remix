@@ -12,7 +12,7 @@ import stylesheet from "~/tailwind.css?url"
 import favicon from "/code-the-design.svg?url"
 
 
-import { fonts } from "../constants";
+import { fonts } from "../lib/constants";
 import { Navbar } from "~/components"
 
 export const links: LinksFunction = () => {
