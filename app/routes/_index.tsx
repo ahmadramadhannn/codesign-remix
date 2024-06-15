@@ -1,6 +1,6 @@
 import { useSearchParams } from "@remix-run/react"
 import { filterChallenges } from "lib/challenges"
-import { FilterChallenge } from "~/components"
+import { FilterChallenge, NotFoundChallenge } from "~/components"
 
 
 
@@ -14,10 +14,10 @@ export default function Page() {
   const totalChallenges = challenges.length
   return (
 
-    <div className="mt-10 grid gap-8">
+    <div className="mt-10 grid gap-9">
       <FilterChallenge totalChallenges={totalChallenges} />
       <div className="grid gap-5">
-        {challenges.map((challenge) => (
+        {!challenges.length ? <NotFoundChallenge /> : challenges.map((challenge) => (
           <div key={challenge.id} id="challenge-card" className="border border-black p-5 bg-white grid gap-4">
             <p>{challenge.title}</p>
             <div>

@@ -8,7 +8,7 @@ export const challenges: Challenges = [
   { id: 3, title: "Authed", description: "Authed is a modern and sleek authentication page designed for an online course website. The page features a two-column layout, with a form on the left side and an illustration and headline with a satirical style on the right. The form allows users to easily sign in or create an account, ensuring a smooth and seamless process for accessing course content. The page is designed to be user-friendly and intuitive, making it easy for users to navigate and find what they need. The illustration and headline on the right add a touch of personality to the page, making it stand out from traditional authentication pages.", difficulty: Difficulty.Advanced, category: "page", designer: "nauval" }
 ]
 
-export const filterChallenges = (category: string, difficulty: string) => {
+export const filterChallenges = (category: string, difficulty: string): Challenges => {
 
 
   let selectedDifficulty: Difficulty;
