@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FilterDropdown, FilterButton } from "."
+import { FilterDropdown, FilterButton, Overlay } from "."
 import { useSearchParams } from "@remix-run/react";
 
 
@@ -29,7 +29,7 @@ export function FilterChallenge({ totalChallenges }: { totalChallenges: number }
         <h3 className="font-patrick-hand text-home-brand text-2xl">/{`${totalChallenges} ${totalChallenges >= 2 ? 'challenges' : 'challenge'}`}  </h3>
       </div>
       <FilterButton />
-      <div onMouseDown={toggleDropdown} className={`absolute top-0 left-0 w-full h-full ${isDropdownOpen ? 'block' : 'hidden'} z-[99]`}></div>
+      <Overlay onMouseDown={toggleDropdown} isDropdownOpen={isDropdownOpen} />
     </div>
   )
 }

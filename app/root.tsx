@@ -53,7 +53,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className={`${!liveRoute ? 'bg-home-primary-blue p-7 sm:p-8 xl:p-20' : ''} min-h-svh relative`}>
         <div className={`${!liveRoute ? 'lg:mt-9 xl:mt-0 xl:w-[73em] xl:mx-auto' : ''}`}>
           {!liveRoute && <Navbar />}
-          {children}
+          <main className={`${!liveRoute ? 'mt-10' : ''}`}>
+
+            {children}
+          </main>
 
         </div>
         <ScrollRestoration />
