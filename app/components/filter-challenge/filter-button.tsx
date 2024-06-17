@@ -9,7 +9,7 @@ export function FilterButton() {
 
   const categories = ["all categories", "app", "component", "page"]
   return (
-    <div className="grid grid-cols-2 md:flex gap-5">
+    <div className="flex flex-wrap sm:grid sm:grid-cols-2 md:flex gap-5">
       {categories.map((item) => (
         <ButtonFilterItem categorySelected={category} key={item} categoryName={item} onMouseDown={() => setSearchParams({
           difficulty: difficulty,
