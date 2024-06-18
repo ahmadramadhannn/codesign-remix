@@ -13,7 +13,7 @@ import favicon from "/code-the-design.svg?url"
 
 
 import { fonts } from "../lib/constants";
-import { Navbar } from "~/components"
+import { Footer, Navbar } from "~/components"
 
 export const links: LinksFunction = () => {
 
@@ -58,6 +58,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </main>
 
+
+          {!liveRoute && <Footer />}
         </div>
         <ScrollRestoration />
         <Scripts />

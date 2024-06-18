@@ -11,3 +11,5 @@ export * from "./challenge-card"
 export * from "./category-icon"
 export * from "./difficulty-icon"
 export * from "./right-arrow"
+export * from "./footer"
+
