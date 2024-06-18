@@ -10,7 +10,7 @@ export function FilterDropdown({ isDropdownOpen }: { isDropdownOpen: boolean }) 
 
   const difficulties = ["all", "intermediate", "advanced", "expert", "master"]
   return (
-    <div className={`absolute ${isDropdownOpen ? 'block' : 'hidden'} w-[104%] md:w-[13.5rem] min-h-10 border-4 border-black bg-white -left-1 top-14 w-full z-[999]`}>
+    <div className={`absolute ${isDropdownOpen ? 'block' : 'hidden'} w-[104%] md:w-[13.5rem] min-h-10 border-4 border-black bg-white -left-1 top-14 w-full z-[999999]`}>
       {difficulties.map((item) => (
         <DropdownFilterItem selectedDifficulty={difficulty} onMouseDown={() => setSearchParams({
           difficulty: item,

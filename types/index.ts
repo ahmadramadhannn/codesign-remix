@@ -1,10 +1,13 @@
 export type Challenge = {
   id: number;
-  title: string;
+  name: string;
+  slug: string;
   description: string;
   difficulty: number;
   category: string;
   designer: string;
+  embedUrl: string;
+  figmaUrl: string;
 }
 
 export type Challenges = Challenge[]
