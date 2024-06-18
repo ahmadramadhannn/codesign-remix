@@ -1,21 +1,31 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { getChallenge } from "lib/challenges";
-import { DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
+import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
 
+
+// TODO: 
 export const loader = ({ params }: LoaderFunctionArgs) => {
-  const slug = params.slug
+  const slug = params.slug ?? ""
 
-  const challenge = getChallenge(slug ?? "")
+  const challenge = getChallenge(slug)
 
-  return challenge
+  return { challenge, slug }
 }
 
 
 export default function Page() {
-  const challenge = useLoaderData<typeof loader>();
+  const { challenge, slug } = useLoaderData<typeof loader>();
 
+
+
+
+  if (!challenge) {
+    return (
+      <ChallengeNotFound slug={slug} />
+    )
+  }
 
   return (
     <div className="grid gap-5">
