@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getChallenge } from "lib/challenges";
 import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
@@ -41,6 +41,8 @@ export default function Page() {
                 <DownloadIcon />
                 <p className="text-2xl text-black">Download Design</p>
               </a>
+
+              <Link to={`/live/${challenge.slug}`} className="p-10 bg-white py-3 text-center w-full text-2xl font-patrick-hand border-2 border-black">Live Page</Link>
 
               <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" className="text-lg font-patrick-hand">Read The License</a>
             </div>

@@ -1,4 +1,9 @@
 import type { Config } from 'tailwindcss'
+import { backgroundColor, textColor } from './lib/tailwind'
+
+
+
+
 
 export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
@@ -9,17 +14,8 @@ export default {
         'patrick-hand': 'Patrick Hand',
         'noto-sans': "Noto Sans"
       },
-      backgroundColor: {
-        home: {
-          'primary-blue': '#1f4290',
-          'brand': '#ffd466'
-        }
-      },
-      textColor: {
-        home: {
-          'brand': '#ffd466'
-        }
-      }
+      backgroundColor,
+      textColor,
     },
   },
   plugins: [
