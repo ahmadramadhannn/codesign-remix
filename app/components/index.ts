@@ -12,4 +12,4 @@ export * from "./category-icon"
 export * from "./difficulty-icon"
 export * from "./right-arrow"
 export * from "./footer"
-
+export * from "./challenges"

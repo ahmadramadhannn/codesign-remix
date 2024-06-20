@@ -20,7 +20,6 @@ export default function Page() {
 
 
 
-
   if (!challenge) {
     return (
       <ChallengeNotFound slug={slug} />
@@ -29,7 +28,7 @@ export default function Page() {
 
   return (
     <div className="grid gap-5">
-      <FigmaEmbedCard embedUrl={challenge.embedUrl} />
+      <FigmaEmbedCard figmaId={challenge.figmaId} />
       <div className="grid w-full lg:grid-cols-3 gap-5">
         <div className="lg:col-span-2">
           <DescriptionCard name={challenge.name} description={challenge.description} />

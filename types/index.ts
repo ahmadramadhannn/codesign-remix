@@ -6,7 +6,7 @@ export type Challenge = {
   difficulty: number;
   category: string;
   designer: string;
-  embedUrl: string;
+  figmaId: string;
   figmaUrl: string;
 }
 

@@ -1,4 +1,5 @@
-import { Challenges, Difficulty } from "types";
+import { Challenges, Difficulty } from "types"
+
 
 const createSlug = (name: string): string => {
   const slug = name.toLowerCase().split(" ").join("-").replace("'", "")
@@ -16,7 +17,7 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Expert,
     category: "page",
     designer: "nauval",
-    embedUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fp1HY7dMOTEQsjH96oTVPe6%2FThe-Malaka-%25E2%2580%2593-Ebook-Landing-Page-UI-Design-(Community)%3Fnode-id%3D0-1%26t%3Dz7asA8Z6cqm88bzK-1",
+    figmaId: "1064953526065340295",
     figmaUrl: "https://www.figma.com/community/file/1064953526065340295"
   },
   {
@@ -27,7 +28,7 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Expert,
     category: "page",
     designer: "nauval",
-    embedUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FFOpJa8pn2UPLf3CK1p1Z4T%2FChat-n'-rechat%25C2%25A0%25E2%2580%2593%25C2%25A0Landing-Page-UI-Design-(Community)%3Fnode-id%3D0-1%26t%3DUGGQCRxGlatcQKur-1",
+    figmaId: "1061306005803309728",
     figmaUrl: "https://www.figma.com/community/file/1061306005803309728"
   },
   {
@@ -38,8 +39,19 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Advanced,
     category: "page",
     designer: "nauval",
-    embedUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fy9uP6TZ1Hx4MSQKixNetqZ%2FAuthed%25C2%25A0%25E2%2580%2593%25C2%25A0Authentication-UI-Design-(Community)%3Fnode-id%3D0-1%26t%3DLNqV0Ar2GeeklZSU-1",
+    figmaId: "1061307506373261985",
     figmaUrl: "https://www.figma.com/community/file/1061307506373261985"
+  },
+  {
+    id: 4,
+    name: "Collosal",
+    slug: createSlug("Collosal"),
+    description: "Collosal is a visually stunning landing page designed for a software house company. With several pages including a home page, services page, about page, and even a blog page, this design is perfect for showcasing the capabilities of the company. The theme is dark with a blurry background and gradient, giving it a glassmorphism effect that is sure to impress. The various pages allow you to highlight the company's services, team, and culture, making it easy for potential clients to get a feel for what you have to offer. With a responsive design that adapts to different screen sizes and devices, Collosal ensures an optimal user experience for all visitors.",
+    difficulty: Difficulty.Master,
+    category: "page",
+    designer: "nauval",
+    figmaId: "1061303456713302684",
+    figmaUrl: "https://www.figma.com/community/file/1061303456713302684"
   }
 ]
 

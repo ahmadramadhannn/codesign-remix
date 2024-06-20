@@ -59,6 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </main>
 
 
+
           {!liveRoute && <Footer />}
         </div>
         <ScrollRestoration />
