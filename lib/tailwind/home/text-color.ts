@@ -1,3 +1,6 @@
+import { colors } from "."
+
+
 export const textColor = {
-  "brand": "#ffd466"
+  "brand": colors.brand
 }

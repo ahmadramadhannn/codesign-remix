@@ -5,6 +5,8 @@ import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
 
 
+
+
 // TODO: 
 export const loader = ({ params }: LoaderFunctionArgs) => {
   const slug = params.slug ?? ""

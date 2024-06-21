@@ -12,7 +12,8 @@ export default {
       fontFamily: {
         fredoka: 'Fredoka',
         'patrick-hand': 'Patrick Hand',
-        'noto-sans': "Noto Sans"
+        'noto-sans': "Noto Sans",
+        "dm-sans": "DM Sans"
       },
       backgroundColor,
       textColor,
