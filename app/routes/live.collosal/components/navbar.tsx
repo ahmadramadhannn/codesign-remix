@@ -3,7 +3,7 @@ import { Nav, StackedBox } from "."
 
 export function Navbar() {
   return (
-    <header className="grid items-center lg:grid-cols-4 gap-10 w-full">
+    <header className="grid items-center lg:grid-cols-4 gap-10 w-11/12 mx-auto">
       <Link to="/" className="w-max flex gap-6">
         <StackedBox />
 
