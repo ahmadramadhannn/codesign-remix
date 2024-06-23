@@ -39,6 +39,7 @@ export const meta: MetaFunction = () => {
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
   const liveRoute = location.pathname.includes("live")
+
   return (
     <html lang="en">
       <head>
@@ -57,7 +58,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
             {children}
           </main>
-
 
 
           {!liveRoute && <Footer />}

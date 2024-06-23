@@ -4,7 +4,8 @@ import { Nav, StackedBox } from "."
 export function Navbar() {
   return (
     <header className="grid items-center lg:grid-cols-4 gap-10 w-11/12 mx-auto">
-      <Link to="/" className="w-max flex gap-6">
+      <Link to="." className="w-max flex gap-6">
+
         <StackedBox />
 
         <h2 className="font-dm-sans font-bold text-2xl">Collosal.</h2>
@@ -15,7 +16,7 @@ export function Navbar() {
 
       <div className="grid place-content-end">
 
-        <button className="w-[112px] font-medium text-sm text-center py-2 bg-white/10 rounded">Contact</button>
+        <Link to="./contact" className="w-[112px] font-medium text-sm text-center py-2 bg-white/10 rounded">Contact</Link>
       </div>
     </header>
   )
