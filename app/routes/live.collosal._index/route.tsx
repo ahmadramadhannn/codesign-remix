@@ -1,4 +1,4 @@
-import { Features, Hero, Testimonial } from "./components";
+import { Features, Hero, HowWeWork, Testimonial } from "./components";
 
 export default function Page() {
   return (
@@ -8,6 +8,7 @@ export default function Page() {
         <Hero />
         <Features />
         <Testimonial />
+        <HowWeWork />
       </div>
     </div>
   )
