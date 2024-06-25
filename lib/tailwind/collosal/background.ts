@@ -1,4 +1,3 @@
-import { colors } from "."
 
 export const background = {
   "dark": "#0b0b22",
