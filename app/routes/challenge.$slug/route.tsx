@@ -1,10 +1,8 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import { getChallenge } from "lib/challenges";
 import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
-
-
 
 
 // TODO: 
@@ -13,20 +11,18 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 
   const challenge = getChallenge(slug)
 
-  return { challenge, slug }
+  if (challenge === undefined) {
+    throw new Response("challenge not found", { status: 404 })
+  }
+
+  return challenge
 }
 
 
 export default function Page() {
-  const { challenge, slug } = useLoaderData<typeof loader>();
+  const challenge = useLoaderData<typeof loader>();
 
 
-
-  if (!challenge) {
-    return (
-      <ChallengeNotFound slug={slug} />
-    )
-  }
 
   return (
     <div className="grid gap-5">
@@ -83,4 +79,31 @@ export default function Page() {
       </div>
     </div>
   )
+}
+
+
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    switch (error.status) {
+      case 404: {
+        return (
+          <ChallengeNotFound />
+        )
+      }
+    }
+  } else if (error instanceof Error) {
+    return (
+      <div>
+        <h1>Error</h1>
+        <p>{error.message}</p>
+        <p>The stack trace is:</p>
+        <pre>{error.stack}</pre>
+      </div>
+    );
+  } else {
+    return <h1>Unkown Error</h1>
+  }
 }

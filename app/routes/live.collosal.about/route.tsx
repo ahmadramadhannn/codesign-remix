@@ -1,10 +1,11 @@
+import { BaseLayout } from "~/components"
 import { Testimonial } from "../live.collosal._index/components"
 import { PageTitle, SectionBadge } from "../live.collosal/components"
 import { Statistics, Team } from "./components"
 
 export default function Page() {
   return (
-    <div className="mx-auto w-11/12">
+    <BaseLayout>
       <div className="grid grid-cols-3 w-11/12 mx-auto gap-32">
         <div className="relative w-max">
           <img alt="a nice picture of someone chill in their comy" src="/collosal/someone-in-char.png" />
@@ -24,6 +25,6 @@ export default function Page() {
         <Testimonial />
         <Team />
       </div>
-    </div>
+    </BaseLayout>
   )
 }
