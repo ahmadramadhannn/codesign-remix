@@ -23,7 +23,6 @@ export default function Page() {
   const challenge = useLoaderData<typeof loader>();
 
 
-
   return (
     <div className="grid gap-5">
       <FigmaEmbedCard figmaId={challenge.figmaId} />

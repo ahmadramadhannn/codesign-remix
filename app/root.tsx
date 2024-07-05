@@ -1,11 +1,14 @@
 import { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
   useLocation,
+  useRouteError,
 } from "@remix-run/react";
 
 import stylesheet from "~/tailwind.css?url"
@@ -71,4 +74,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <Outlet />;
+}
+
+
+export function ErrorBoundary() {
+  const location = useLocation();
+  const error = useRouteError();
+
+  if (!isRouteErrorResponse(error) || error! instanceof Error) {
+    return <h1>Unknown Error</h1>
+  }
+
+  if (isRouteErrorResponse(error)) {
+    if (location.pathname.includes("live")) {
+      return (
+        <div className="min-h-svh grid place-content-center">
+          <div className="border-2 rounded-md shadow-lg w-[30em] flex flex-col gap-5 p-10">
+            <p>Sorry, there's no live or preview page of {location.pathname} challenge.</p>
+            <Link to="/" className="bg-blue-600 p-4 text-white w-max rounded-md">Back to Homepage</Link>
+          </div>
+        </div>
+      )
+    }
+
+    switch (error.status) {
+      case 404: {
+        return <p>not found</p>
+      }
+      default: {
+        return <p>something went wrong, sorry for this</p>
+      }
+    }
+  }
+
 }
