@@ -21,6 +21,7 @@ export default function Page() {
     <div className="mt-10 grid gap-9">
       <FilterChallenge totalChallenges={totalChallenges} />
       <div className="grid gap-5">
+
         <Challenges challenges={challenges} />
       </div>
 

@@ -1,5 +1,5 @@
 import { Challenges as ChallengesType } from "types"
-import { NotFoundChallenge, ChallengeCard } from "."
+import { NotFoundChallenge, ChallengeCard, For } from "."
 
 export function Challenges({ challenges }: { challenges: ChallengesType }) {
 
@@ -7,6 +7,13 @@ export function Challenges({ challenges }: { challenges: ChallengesType }) {
     return <NotFoundChallenge />
   }
 
+  return <For each={challenges.sort((a, b) => b.difficulty - a.difficulty)} fallback={<NotFoundChallenge />}>
+    {(challenge, index) =>
+      <ChallengeCard key={index} challenge={challenge} />
+    }
+  </For>
+
+  /** 
   return (
     <>
       {challenges.sort((a, b) => b.difficulty - a.difficulty).map((challenge) => (
@@ -17,5 +24,6 @@ export function Challenges({ challenges }: { challenges: ChallengesType }) {
     </>
   )
 
+  **/
 
 }
