@@ -12,7 +12,7 @@ export function NavItem({ icon, path, name }: NavItemProps) {
   }
   return (
     <li className="group">
-      <NavLink to={path} className={active} >
+      <NavLink prefetch="intent" to={path} className={active} >
         {icon}
         <p className="text-lg lg:text-2xl">{name}</p>
       </NavLink>

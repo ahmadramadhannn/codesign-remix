@@ -16,7 +16,7 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
           <h2 id="title" className="font-fredoka text-2xl lg:text-4xl font-bold">{challenge.name}</h2>
           <p className="font-patrick-hand text-xl text-black/60 line-clamp-3 h-[4em]">{challenge.description}
           </p>
-          <Link to={`/challenge/${challenge.slug}`} className="mt-6 relative bg-white text-center h-[3.5em] px-14 border-2 border-black w-max font-fredoka text-base text-black grid items-center font-bold">
+          <Link prefetch="intent" to={`/challenge/${challenge.slug}`} className="mt-6 relative bg-white text-center h-[3.5em] px-14 border-2 border-black w-max font-fredoka text-base text-black grid items-center font-bold">
             <p>View Challenge</p>
           </Link>
 

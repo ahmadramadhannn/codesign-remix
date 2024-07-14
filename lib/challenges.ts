@@ -7,6 +7,7 @@ const createSlug = (name: string): string => {
   return slug
 }
 
+const figmaCommunityUrl = "https://www.figma.com/community"
 
 export const challenges: Challenges = [
   {
@@ -18,7 +19,7 @@ export const challenges: Challenges = [
     category: "page",
     designer: "nauval",
     figmaId: "1064953526065340295",
-    figmaUrl: "https://www.figma.com/community/file/1064953526065340295"
+    figmaUrl: `${figmaCommunityUrl}/file/1064953526065340295`
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ export const challenges: Challenges = [
     category: "page",
     designer: "nauval",
     figmaId: "1061306005803309728",
-    figmaUrl: "https://www.figma.com/community/file/1061306005803309728"
+    figmaUrl: `${figmaCommunityUrl}/file/1061306005803309728`
   },
   {
     id: 3,
@@ -52,6 +53,17 @@ export const challenges: Challenges = [
     designer: "nauval",
     figmaId: "1061303456713302684",
     figmaUrl: "https://www.figma.com/community/file/1061303456713302684"
+  },
+  {
+    id: 5,
+    name: "Nowted App",
+    slug: createSlug("Nowted App"),
+    description: "Nowted is a visually striking and highly functional note-taking app with a variety of features and tools to help users organize, edit, and access their notes. The app has a clean and modern design, with a three-column layout that allows users to easily navigate and access their notes. The first column is a sidebar that contains a list of folders, recent opened files, a search function, and other features. The second column is a list of the files in the opened folder, and the third column is a WYSIWYG (What You See Is What You Get) editor that allows users to edit and format their notes. It is a key part of the user's overall note-taking experience, and can be used to organize and access notes in a variety of ways.",
+    difficulty: Difficulty.Advanced,
+    category: "App",
+    designer: "nauval",
+    figmaId: "1188856976000269208",
+    figmaUrl: "https://www.figma.com/community/file/1188856976000269208"
   }
 ]
 

@@ -81,6 +81,7 @@ export function ErrorBoundary() {
   const location = useLocation();
   const error = useRouteError();
 
+
   if (!isRouteErrorResponse(error) || error! instanceof Error) {
     return <h1>Unknown Error</h1>
   }
@@ -96,6 +97,7 @@ export function ErrorBoundary() {
         </div>
       )
     }
+
 
     switch (error.status) {
       case 404: {

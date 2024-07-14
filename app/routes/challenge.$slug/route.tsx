@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
-import { Link, useLoaderData, isRouteErrorResponse, useRouteError } from "@remix-run/react";
+import { Link, useLoaderData, isRouteErrorResponse, useRouteError, json } from "@remix-run/react";
 import { getChallenge } from "lib/challenges";
 import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
@@ -15,12 +15,19 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
     throw new Response("challenge not found", { status: 404 })
   }
 
-  return challenge
+  return json(
+    { challenge },
+    {
+      headers: {
+        'Cache-Control': "max-age=3600, public"
+      }
+    }
+  )
 }
 
 
 export default function Page() {
-  const challenge = useLoaderData<typeof loader>();
+  const { challenge } = useLoaderData<typeof loader>();
 
 
   return (
@@ -39,7 +46,7 @@ export default function Page() {
                 <p className="text-2xl text-black">Download Design</p>
               </a>
 
-              <Link to={`/live/${challenge.slug}`} className="p-10 bg-white py-3 text-center w-full text-2xl font-patrick-hand border-2 border-black">Live Page</Link>
+              <Link prefetch="intent" to={`/live/${challenge.slug}`} className="p-10 bg-white py-3 text-center w-full text-2xl font-patrick-hand border-2 border-black">Live Page</Link>
 
               <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" className="text-lg font-patrick-hand">Read The License</a>
             </div>
