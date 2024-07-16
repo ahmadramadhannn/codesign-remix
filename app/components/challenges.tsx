@@ -13,17 +13,4 @@ export function Challenges({ challenges }: { challenges: ChallengesType }) {
     }
   </For>
 
-  /** 
-  return (
-    <>
-      {challenges.sort((a, b) => b.difficulty - a.difficulty).map((challenge) => (
-
-        <ChallengeCard key={challenge.id} challenge={challenge} />
-      ))}
-
-    </>
-  )
-
-  **/
-
 }

@@ -4,7 +4,7 @@ export type Challenge = {
   slug: string;
   description: string;
   difficulty: number;
-  category: string;
+  category: number;
   designer: string;
   figmaId: string;
   figmaUrl: string;
@@ -17,4 +17,10 @@ export enum Difficulty {
   Advanced = 2,
   Expert = 3,
   Master = 4
+}
+
+export enum Category {
+  Component = 1,
+  Page = 2,
+  App = 3
 }

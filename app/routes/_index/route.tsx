@@ -1,20 +1,20 @@
 import { useSearchParams } from "@remix-run/react"
-import { filterChallenges } from "lib/challenges"
-import { FilterChallenge, Challenges } from "~/components"
+import { filterChallenges, challenges } from "lib"
+import { Category, Difficulty } from "types"
+import { FilterChallenge, Challenges, DifficultyIcon } from "~/components"
 
 
 
 export default function Page() {
   const [searchParams] = useSearchParams()
 
+  const difficultyParam = searchParams.get("difficulty") ?? "all"
+  const difficulty = difficultyParam as keyof typeof Difficulty
+  const categoryParam = searchParams.get("category") ?? "all"
+  const category = categoryParam as keyof typeof Category
 
-  const difficulty = searchParams.get("difficulty") ?? "all"
-  const category = searchParams.get("category") ?? "all"
-
-  const challenges = filterChallenges(category, difficulty)
-  const totalChallenges = challenges.length
-
-
+  const filteredChallenges = filterChallenges(category, difficulty, challenges)
+  const totalChallenges = filteredChallenges.length
 
   return (
 
@@ -22,7 +22,7 @@ export default function Page() {
       <FilterChallenge totalChallenges={totalChallenges} />
       <div className="grid gap-5">
 
-        <Challenges challenges={challenges} />
+        <Challenges challenges={filteredChallenges} />
       </div>
 
     </div>

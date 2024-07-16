@@ -1,6 +1,6 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
 import { Link, useLoaderData, isRouteErrorResponse, useRouteError, json } from "@remix-run/react";
-import { getChallenge } from "lib/challenges";
+import { categoryToString, difficultyToString, getChallenge } from "lib/challenges";
 import { ChallengeNotFound, DescriptionCard, DownloadIcon, FigmaEmbedCard } from "./components";
 import { Card, CategoryIcon, DifficultyIcon } from "~/components";
 
@@ -25,10 +25,11 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
   )
 }
 
-
 export default function Page() {
   const { challenge } = useLoaderData<typeof loader>();
 
+  const difficulty = difficultyToString(challenge.difficulty)
+  const category = categoryToString(challenge.category)
 
   return (
     <div className="grid gap-5">
@@ -57,14 +58,14 @@ export default function Page() {
                 <DifficultyIcon />
                 <div>
                   <p className="text-base text-black/60 uppercase">difficulty</p>
-                  <p className="text-2xl font-semibold">{challenge.difficulty}</p>
+                  <p className="text-2xl font-semibold">{difficulty}</p>
                 </div>
               </div>
               <div className="flex gap-4 font-patrick-hand">
                 <CategoryIcon />
                 <div>
                   <p className="text-base text-black/60 uppercase">category</p>
-                  <p className="text-2xl font-semibold">{challenge.category}</p>
+                  <p className="text-2xl font-semibold">{category}</p>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ export function FilterButton() {
   const category = searchParams.get("category") ?? "all categories"
   const difficulty = searchParams.get("difficulty") ?? "all"
 
-  const categories = ["all categories", "app", "component", "page"]
+  const categories = ["all categories", "App", "Component", "Page"]
   return (
     <div className="flex flex-wrap sm:grid sm:grid-cols-2 md:flex gap-5">
       {categories.map((item) => (

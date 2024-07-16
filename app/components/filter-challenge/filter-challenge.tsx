@@ -10,7 +10,6 @@ export function FilterChallenge({ totalChallenges }: { totalChallenges: number }
 
   const difficulty = searchParams.get("difficulty") ?? "all"
 
-
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen)
 
 

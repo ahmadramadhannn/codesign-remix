@@ -1,13 +1,15 @@
 import { Challenge } from "types"
 import { Card, CategoryIcon, DifficultyIcon, RightArrow } from "."
 import { Link } from "@remix-run/react"
+import { categoryToString, difficultyToString } from "lib"
 
 type ChallengeCardProps = {
   challenge: Challenge
 }
 
-
 export function ChallengeCard({ challenge }: ChallengeCardProps) {
+  const difficulty = difficultyToString(challenge.difficulty)
+  const category = categoryToString(challenge.category)
   return (
     <Card>
 
@@ -25,14 +27,14 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
               <DifficultyIcon />
               <div className="flex flex-col font-patrick-hand">
                 <p className="text-base text-black/60 uppercase">difficulty</p>
-                <p className="text-2xl font-bold">{challenge.difficulty}</p>
+                <p className="text-2xl font-bold">{difficulty}</p>
               </div>
             </div>
             <div className="flex gap-5 items-start">
               <CategoryIcon />
               <div className="flex flex-col font-patrick-hand">
                 <p className="text-base text-black/60 uppercase">category</p>
-                <p className="text-2xl font-bold">{challenge.category}</p>
+                <p className="text-2xl font-bold">{category}</p>
               </div>
             </div>
           </div>
