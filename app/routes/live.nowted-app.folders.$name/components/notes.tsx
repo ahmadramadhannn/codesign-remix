@@ -1,5 +1,5 @@
-
 import { Note } from "."
+
 
 export function Notes() {
   return (

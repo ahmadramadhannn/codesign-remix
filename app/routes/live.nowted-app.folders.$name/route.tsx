@@ -1,6 +1,7 @@
-import { json, useLoaderData } from "@remix-run/react"
+import { Outlet, json, useLoaderData, useLocation } from "@remix-run/react"
 import { LoaderFunctionArgs } from "@remix-run/node"
-import { Notes } from "./components"
+import { EmptyNote, Notes } from "./components"
+import { useEffect, useState } from "react"
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 
@@ -9,16 +10,30 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
       .replace("-", " ")
 
 
-  return json({ foldername })
+  return json({ foldername, isClicked: true })
 }
 
 export default function Page() {
-  const { foldername } = useLoaderData<typeof loader>()
-  return (
-    <div className="bg-[#1c1c1c] min-h-svh w-2/5 pt-10">
-      <p className="pt-2 pl-6">hello</p>
+  const { foldername, isClicked } = useLoaderData<typeof loader>()
+  const [folderClicked, setFolderClicked] = useState<boolean>(false);
 
-      <Notes />
+  const location = useLocation()
+
+  const noteLocation = location.pathname.includes("note")
+
+  return (
+    <div className="flex">
+      <div className="bg-[#1c1c1c] min-h-svh w-2/5 pt-10">
+        <p className="pt-2 pl-6">hello</p>
+
+        <Notes
+        />
+      </div>
+      <div className="w-full">
+        {!noteLocation ? <EmptyNote /> : <> </>}
+        <Outlet />
+      </div>
     </div>
+
   )
 }
