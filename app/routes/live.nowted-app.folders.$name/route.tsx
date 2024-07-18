@@ -10,12 +10,11 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
       .replace("-", " ")
 
 
-  return json({ foldername, isClicked: true })
+  return json({ foldername })
 }
 
 export default function Page() {
-  const { foldername, isClicked } = useLoaderData<typeof loader>()
-  const [folderClicked, setFolderClicked] = useState<boolean>(false);
+  const { foldername } = useLoaderData<typeof loader>()
 
   const location = useLocation()
 
