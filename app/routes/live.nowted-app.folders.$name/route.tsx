@@ -18,7 +18,7 @@ export default function Page() {
 
   const location = useLocation()
 
-  const noteLocation = location.pathname.includes("note")
+  const editor = location.pathname.includes("editor")
 
   return (
     <div className="flex">
@@ -29,7 +29,7 @@ export default function Page() {
         />
       </div>
       <div className="w-full">
-        {!noteLocation ? <EmptyNote /> : <> </>}
+        {!editor ? <EmptyNote /> : <> </>}
         <Outlet />
       </div>
     </div>

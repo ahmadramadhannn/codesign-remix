@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react"
 import { Folder } from "../../types"
+import { useState } from "react"
 
 type FoldersProps = {
   folders: Folder[]
@@ -16,6 +17,7 @@ export function Folders({ folders, folderSelection, onMouseDown }: FoldersProps)
           <img alt="" src="/nowted-app/icons/add-folder-icon.svg" />
         </button>
       </div>
+
       {
         folders.map((folder, index) => (
           <Link

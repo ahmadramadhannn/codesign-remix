@@ -4,7 +4,7 @@ export function Note() {
   const date = new Date()
   return (
     <Link
-      to="./note/adada"
+      to="./editor/adada"
       prefetch="intent"
       id="note"
       className="bg-white/5 p-6 grid gap-2"
