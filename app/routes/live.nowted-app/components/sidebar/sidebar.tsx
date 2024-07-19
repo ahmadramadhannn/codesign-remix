@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Section, Folders, More } from "."
 import { Folder } from "../../types";
+import { Link } from "@remix-run/react";
 
 export function Sidebar() {
   const [folderSelection, setFolderSection] = useState<string>("Work");
@@ -14,10 +15,10 @@ export function Sidebar() {
   return (
     <div id="sidebar" className="w-[25%] flex flex-col gap-8">
       <div className="flex justify-between items-center pl-8 pt-10">
-        <div className="flex gap-3">
+        <Link prefetch="intent" to="./" className="flex gap-3">
           <h2 className="font-kaushan-script text-3xl">Nowted</h2>
           <img alt="small pen icon" src="/nowted-app/icons/pen.svg" className="-translate-y-3" />
-        </div>
+        </Link>
         <img alt="search icon white color" src="/nowted-app/icons/search-icon.svg" />
       </div>
 
