@@ -9,7 +9,6 @@ import { ProjectDetail } from "./components";
 export const loader = ({ params }: LoaderFunctionArgs) => {
   const project = getProject(Number(params.id))
 
-
   if (!project) {
     throw new Response("Not Found", { status: 404 })
   }

@@ -8,8 +8,6 @@ export function Nav() {
         <NavItem name="How We Work" />
         <NavItem name="Projects" />
         <NavItem name="About" />
-
-
       </ul>
     </nav>
   )
