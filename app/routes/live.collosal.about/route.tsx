@@ -1,5 +1,5 @@
 import { BaseLayout } from "~/components"
-import { Testimonial } from "../live.collosal._index/components"
+import { Partner } from "../live.collosal._index/components"
 import { PageTitle, SectionBadge } from "../live.collosal/components"
 import { Statistics, Team } from "./components"
 
@@ -22,7 +22,7 @@ export default function Page() {
       <div className="mt-48 grid gap-14">
         <div className="w-full border border-white/10 mb-7"></div>
         <Statistics />
-        <Testimonial />
+        <Partner />
         <Team />
       </div>
     </BaseLayout>

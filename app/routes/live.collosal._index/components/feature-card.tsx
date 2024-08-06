@@ -13,7 +13,6 @@ export function FeatureCard({ featureName, description, icon }: FeatureCardProps
       <div className="grid gap-4">
         <p className="font-bold text-base">{featureName}</p>
         <p className="text-white/60">{description}</p>
-
       </div>
     </article>
   )

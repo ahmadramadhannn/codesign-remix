@@ -28,7 +28,7 @@ export function UIDesign() {
             </div>
             <div className="grid grid-cols-2 gap-y-4 gap-x-3">
               {Array.from({ length: 3 }, (item, index) => (
-                <div className={`bg-white/10 ${index == 0 ? "col-span-2" : ""} h-[87px] rounded-md`}></div>
+                <div key={index} className={`bg-white/10 ${index == 0 ? "col-span-2" : ""} h-[87px] rounded-md`}></div>
               ))}
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { SectionBadge, SectionTitle } from "~/routes/live.collosal/components";
-import { DevelopmentIllustration, DevelopmentTypeCard } from ".";
+import { DevelopmentTypeCard } from ".";
 import { Link } from "@remix-run/react";
 
 export function Development() {
@@ -24,7 +24,7 @@ export function Development() {
         </Link>
       </div>
       <div>
-        <DevelopmentIllustration />
+        <img src="/collosal/dev-illustration.svg" />
       </div>
     </div>
   )

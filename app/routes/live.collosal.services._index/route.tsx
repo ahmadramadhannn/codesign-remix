@@ -11,7 +11,7 @@ export default function Page() {
       </div>
 
       <div className="w-full h-[1px] bg-white/10 mt-32"></div>
-      <div className="w-11/12 mx-auto grid gap-28 mt-24">
+      <div className="w-11/12 mx-auto grid gap-32 mt-24">
         <UIDesign />
         <Development />
         <Maintenance />

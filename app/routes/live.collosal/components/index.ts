@@ -9,3 +9,4 @@ export * from "./section-badge"
 export * from "./section-title"
 export * from "./page-description"
 export * from "./button"
+export * from './section-paraghraph'

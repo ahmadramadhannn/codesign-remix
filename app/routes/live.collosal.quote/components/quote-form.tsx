@@ -3,7 +3,7 @@ import { Button, FormItem } from "~/routes/live.collosal/components"
 export function QuoteForm() {
 
   return (
-    <div className="bg-white/5 p-10">
+    <div className="bg-white/5 p-8">
       <form className="flex flex-col gap-5">
         <div className="flex gap-5">
           <div className="flex flex-col gap-2">
@@ -24,7 +24,6 @@ export function QuoteForm() {
             <div className="flex flex-col gap-2">
               <p className="text-white/60 text-sm">Company Size</p>
               <div className="relative">
-
                 <div className="bg-inherit border-2 border-white/10 h-[44.4px] w-[12.6em]"></div>
 
                 <div className="absolute w-4 h-4 rotate-45 border-b border-r border-white/40 bottom-5 right-4"></div>

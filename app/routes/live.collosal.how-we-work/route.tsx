@@ -12,8 +12,7 @@ export default function Page() {
             <PageTitle title="We have a workflow that allows the job to be delivered well" />
           </div>
         </div>
-        <div className="border border-white/10"></div>
-
+        <div className="border border-white/10 mb-12"></div>
         <Workflow />
       </div>
     </BaseLayout>
