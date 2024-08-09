@@ -17,7 +17,6 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Expert,
     category: Category.Page,
     designer: "nauval",
-    figmaId: "1064953526065340295",
     figmaUrl: `${figmaCommunityUrl}/file/1064953526065340295`
   },
   {
@@ -28,7 +27,6 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Expert,
     category: Category.Page,
     designer: "nauval",
-    figmaId: "1061306005803309728",
     figmaUrl: `${figmaCommunityUrl}/file/1061306005803309728`
   },
   {
@@ -39,7 +37,6 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Advanced,
     category: Category.Page,
     designer: "nauval",
-    figmaId: "1061307506373261985",
     figmaUrl: "https://www.figma.com/community/file/1061307506373261985"
   },
   {
@@ -50,7 +47,6 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Master,
     category: Category.Page,
     designer: "nauval",
-    figmaId: "1061303456713302684",
     figmaUrl: "https://www.figma.com/community/file/1061303456713302684"
   },
   {
@@ -61,8 +57,17 @@ export const challenges: Challenges = [
     difficulty: Difficulty.Advanced,
     category: Category.App,
     designer: "nauval",
-    figmaId: "1188856976000269208",
     figmaUrl: "https://www.figma.com/community/file/1188856976000269208"
+  },
+  {
+    id: 6,
+    name: "Epictetus",
+    slug: createSlug("Epictetus"),
+    description: "'Epictetus is a modern and stylish blogging platform that features a dark design. The home page features a single, large featured post at the top, with a grid of smaller articles below. Navigating to other pages, such as the search page or a single article page, provides users with a seamless and intuitive experience. With its sleek look and user-friendly design, Epictetus is sure to be a hit with bloggers and readers alike.',",
+    difficulty: Difficulty.Intermediate,
+    category: Category.Page,
+    designer: "nauval",
+    figmaUrl: 'https://www.figma.com/community/file/1061308766782882467'
   }
 ]
 

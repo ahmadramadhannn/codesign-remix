@@ -30,10 +30,11 @@ export default function Page() {
 
   const difficulty = difficultyToString(challenge.difficulty)
   const category = categoryToString(challenge.category)
+  const figmaId = challenge.figmaUrl.split("/file/")[1]
 
   return (
     <div className="grid gap-5">
-      <FigmaEmbedCard figmaId={challenge.figmaId} />
+      <FigmaEmbedCard figmaId={figmaId} />
       <div className="grid w-full lg:grid-cols-3 gap-5">
         <div className="lg:col-span-2">
           <DescriptionCard name={challenge.name} description={challenge.description} />
