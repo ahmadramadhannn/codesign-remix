@@ -11,7 +11,9 @@ export default {
         'noto-sans': "Noto Sans",
         "dm-sans": "DM Sans",
         "kaushan-script": "Kaushan Script",
-        "source-sans-3": "Source Sans 3"
+        "source-sans-3": "Source Sans 3",
+        "poppins": "Poppins",
+        "nunito-sans": "Nunito Sans"
       },
       backgroundColor,
       textColor,

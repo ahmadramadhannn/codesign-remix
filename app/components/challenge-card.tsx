@@ -8,6 +8,7 @@ type ChallengeCardProps = {
 }
 
 export function ChallengeCard({ challenge }: ChallengeCardProps) {
+  console.log(challenge.id)
   const difficulty = difficultyToString(challenge.difficulty)
   const category = categoryToString(challenge.category)
   return (

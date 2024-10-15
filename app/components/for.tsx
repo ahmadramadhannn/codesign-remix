@@ -1,5 +1,4 @@
 function simpleMap(
-
   props: { each: any[]; children: Function; fallback?: React.JSX.Element },
   wrap: (fn: Function, item: any, i: number) => React.JSX.Element
 

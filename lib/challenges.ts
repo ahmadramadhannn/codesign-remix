@@ -68,7 +68,7 @@ export const challenges: Challenges = [
     category: Category.Page,
     designer: "nauval",
     figmaUrl: 'https://www.figma.com/community/file/1061308766782882467'
-  }
+  },
 ]
 
 export const getChallenge = (slug: string) => challenges.find((challenge) => challenge.slug == slug)
